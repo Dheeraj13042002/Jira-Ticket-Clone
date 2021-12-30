@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*For NAVBAR*/
+.toolbox-content{
+    height: 5rem;
+    background-color: #2d3436;
+    display: flex;
+    align-items: center;
+}
+
+.toolbox-content>*{
+    margin: 2rem;
+    border-radius: 4px;
+}
+
+.toolbox-priority-content{
+    height: 3.5rem;
+    width: 16rem;
+    background-color: #636e72;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action-btn-cont{
+    height: 3.5rem;
+    width: 8rem;
+    background-color: #636e72;
+    display: flex;
+}
+.action-btn-cont>*{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #dfe6e9;
+}
+
+.color{
+    height: 1.5rem;
+    width: 2.5rem;
+    border-radius: 4px;
+}
+
+.lightpink{
+    background-color: lightpink
+}
+.lightblue{
+    background-color: lightblue
+}
+.lightgreen{
+    background-color: lightgreen
+}
+.black{
+    background-color: black
+}
+
+.action-btn-cont>*:hover{
+    background-color: #b2bec3;
+    border-radius: 4px;
+}
+.color:hover{
+    height: 2rem;
+    width: 3rem;
+    border-radius: 4px;
+}
+
+/*For MODAL*/
+.modal-cont{
+    height: 50vh;
+    width: 45vw;
+    background: lightpink;
+    position: absolute;
+    top: calc((100vh - 50vh)/2);
+    left: calc((100vw - 50vw)/2);
+    display: none;
+}
+
+.textarea-cont{
+    height: 100%;
+    width: 75%;
+    border: none;
+    outline: none;
+    resize:none;
+    background-color: #dfe6e9;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.priority-colors-container{
+    height : 100%;
+    width: 25%;
+    background-color: #636e72;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.priority-color{
+    height: 3rem;
+    width:55%;
+    border-radius: 4px;
+}
+
+.priority-color:hover{
+    height: 3.1rem;
+    width:60%;
+}
+
+.border{
+    border: 5px solid #f1f2f6;
+}
+
+/*TICKET*/
+.ticket-cont{
+    height: 12rem;
+    width: 16rem;
+    background-color: #f1f2f6;
+}
+
+.task-color{
+    height:1rem;
+}
+
+.task-id{
+    padding: 0.5rem;
+    height:2rem;
+}
+
+.task-content{
+    height : calc( 100% - 2rem - 1rem );
+    padding: 0.5rem;
+}
+
+.main-cont{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+}
