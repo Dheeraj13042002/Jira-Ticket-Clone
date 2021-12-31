@@ -5,6 +5,7 @@ const mainCont = document.querySelector(".main-cont");
 const textAreaContainer = document.querySelector(".textarea-cont");
 const priorityColor = document.querySelectorAll(".priority-color");
 const toolBoxColors = document.querySelectorAll(".color");
+const saveButton = document.querySelector(".save");
 
 
 const colors = ["lightpink", "lightblue", "lightgreen", "black"];
@@ -74,7 +75,7 @@ priorityColor.forEach((colorElem,idx) => {
 });
 
 // Display a Modal to fill details for our ticket.
-addBtn.addEventListener("click",(e)=>{
+addBtn.addEventListener("click",(e) => {
     // addFlag = true => Display Modal
     // addFlag = false => Remove Modal
     addFlag = !addFlag;
@@ -87,13 +88,10 @@ addBtn.addEventListener("click",(e)=>{
     }
 });
 
-modal.addEventListener("keydown",(e)=>{
-    let key = e.key;
-    if(key === "Shift"){
-        createTicket(activeColor, textAreaContainer.value);
-        setModalToDefault()
-        addFlag = !addFlag;
-    }
+saveButton.addEventListener("click",(e)=>{
+    createTicket(activeColor, textAreaContainer.value);
+    setModalToDefault();
+    addFlag = !addFlag;
 });
 
 

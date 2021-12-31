@@ -159,7 +159,19 @@ body{
     justify-content: center;
 }
 
+.save{
+    position: absolute;
+    height: 2.5rem;
+    width: 3.5rem;
+    border-radius: 4px;
+    background-color: #d2dae2;
 
+    right: 25%;
+    bottom: 0;
+}
+
+
+/*MEDIA QUERIES*/
 @media screen and (min-width:425px) and (max-width:768px){
     .modal-cont{
         width: 60vw;
