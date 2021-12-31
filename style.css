@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 body{
     margin: 0;
@@ -66,11 +67,11 @@ body{
     background-color: #b2bec3;
     border-radius: 4px;
 }
-.color:hover{
+/* .color:hover{
     height: 2rem;
     width: 3rem;
     border-radius: 4px;
-}
+} */
 
 /*For MODAL*/
 .modal-cont{
@@ -79,8 +80,9 @@ body{
     background: lightpink;
     position: absolute;
     top: calc((100vh - 50vh)/2);
-    left: calc((100vw - 50vw)/2);
+    left: calc((100vw - 45vw)/2);
     display: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .textarea-cont{
@@ -137,7 +139,6 @@ body{
 .task-content{
     height : calc( 100% - 2rem - 1rem - 2rem);
     padding: 0.5rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
     outline: none;
 }
 
@@ -156,4 +157,89 @@ body{
     padding: 2rem;
     gap: 2rem;
     justify-content: center;
+}
+
+
+@media screen and (min-width:425px) and (max-width:768px){
+    .modal-cont{
+        width: 60vw;
+        left: calc((100vw - 60vw)/2);
+    }
+    .border{
+        border: 3px solid #f1f2f6;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .modal-cont{
+        height: 40vh;
+        width: 60vw;
+        top: calc((100vh - 40vh)/2);
+        left: calc((100vw - 60vw)/2);
+    }
+
+    .priority-color{
+      margin: 0.5rem;
+    }
+    .border{
+        border: 3px solid #f1f2f6;
+    }
+
+    .color{
+        height: 1.5rem;
+        width: 2rem;
+        border-radius: 4px;
+    }
+    /* .color:hover{
+        height: 1.7rem;
+        width: 2.2rem;
+        border-radius: 4px;
+    } */
+}
+
+@media screen and (max-width:321px) {
+
+    .modal-cont{
+        height: 30vh;
+        width: 70vw;
+        top: calc((100vh - 30vh)/2);
+        left: calc((100vw - 70vw)/2);
+    }
+    .color{
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 4px;
+    }
+    .priority-color{
+        width: 1.5rem;
+        margin: 0.5rem;
+    }
+    .border{
+        border: 2px solid #f1f2f6;
+    }
+    
+
+    .toolbox-priority-content{
+        height: 3rem;
+        width: 18rem;
+        background-color: #636e72;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .action-btn-cont{
+        height: 3rem;
+        width: 12rem;
+        background-color: #636e72;
+        display: flex;
+    }
+    .action-btn-cont>*{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: #dfe6e9;
+    }
 }
