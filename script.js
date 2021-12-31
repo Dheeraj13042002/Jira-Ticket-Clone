@@ -8,12 +8,12 @@ const toolBoxColors = document.querySelectorAll(".color");
 const saveButton = document.querySelector(".save");
 
 
+
 const colors = ["lightpink", "lightblue", "lightgreen", "black"];
 let activeColor = colors[colors.length-1];
 
 
 let addFlag = false;
-let removeFlag = false;
 
 let lockClass = "fa-lock";
 let unlockClass = "fa-lock-open";
@@ -114,7 +114,10 @@ function createTicket(ticketColor, ticketTask, ticketId){
         <div class="task-color ${ticketColor}"></div>
         <div class="task-id">#${id}</div>
         <div class="task-content">${ticketTask}</div>
-        <div class="ticket-lock"><i class="fas fa-lock"></i></div>
+        <div class="ticket-lock">
+            <i class="fas fa-lock"></i>
+            <i class="fas fa-trash-alt"></i>
+        </div>
     `
     // Append this generated ticket in our main-container
     mainCont.appendChild(ticketCont);
@@ -131,9 +134,11 @@ function createTicket(ticketColor, ticketTask, ticketId){
 
 // Function to delete a ticket
 function handleRemoval(ticket, id){
-    ticket.addEventListener("click", (e)=>{
-        if(!removeFlag) return;
+    // deleteTicket.
+    let deleteTicketEle = ticket.querySelector(".ticket-lock");
+    let deleteTicket  = deleteTicketEle.children[1];
 
+    deleteTicket.addEventListener("click", (e) => {
         // DB Removal
         let ticketIdx = getTicketIdx(id);
         ticketsArr.splice(ticketIdx,1);
@@ -141,23 +146,8 @@ function handleRemoval(ticket, id){
 
         // UI Removal
         ticket.remove();
-        
     });
 }
-
-
-// Removing the task on the basis of flag
-removeBtn.addEventListener("click",(e)=>{
-    // removeFlag = true => Remove the clicked ticket
-    removeFlag = !removeFlag;
-
-    if(removeFlag){
-        alert("Deletion Activated! Please click on tickets to delete them");
-    }
-    else{
-        alert("Deletion stopped");
-    }
-});
 
 
 function handleLock(ticket, id){

@@ -31,12 +31,12 @@ body{
 
 .action-btn-cont{
     height: 3.5rem;
-    width: 8rem;
+    width: 4rem;
     background-color: #636e72;
     display: flex;
+    justify-content: center;
 }
-.action-btn-cont>*{
-    width: 50%;
+.add-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,15 +63,14 @@ body{
     background-color: black
 }
 
-.action-btn-cont>*:hover{
+.action-btn-cont:hover{
     background-color: #b2bec3;
-    border-radius: 4px;
 }
-/* .color:hover{
-    height: 2rem;
-    width: 3rem;
-    border-radius: 4px;
-} */
+
+
+.heading h1{
+    color: white;
+}
 
 /*For MODAL*/
 .modal-cont{
@@ -149,6 +148,7 @@ body{
     font-size: 1.5rem;
     padding-right: 1rem;
     color: #8395a7;
+    gap : 1rem;
 }
 
 .main-cont{
@@ -242,12 +242,12 @@ body{
 
     .action-btn-cont{
         height: 3rem;
-        width: 12rem;
+        width: 4rem;
         background-color: #636e72;
         display: flex;
+        justify-content: center;
     }
-    .action-btn-cont>*{
-        width: 50%;
+    .add-btn {
         display: flex;
         justify-content: center;
         align-items: center;
